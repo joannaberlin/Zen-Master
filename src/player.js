@@ -6,7 +6,7 @@ class Player {
 		this.x = 0;
 		this.y = height - this.height;
         
-        this.score = 1000;
+        //this.score = 1000;
     }
 
     draw() {
@@ -15,19 +15,20 @@ class Player {
     }
 
     moveUp() {
-        this.y -= 50;
+        this.y -= 40;
+
     }
 
     moveDown() {
-        this.y += 50;
+        this.y += 40;
     }
 
     moveRight() {
-        this.x += 50;
+        this.x += 40;
     }
 
     moveLeft() {
-        this.x -= 50;
+        this.x -= 40;
     }
 
 }

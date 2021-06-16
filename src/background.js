@@ -6,19 +6,19 @@ class Background {
         if (frameCount < 1000) {
             image(game.backgroundImages[0], 0, 0, width, height);
         } 
-        if (frameCount >= 1000) {
-        //if (frameCount >= 1000 && player.score >= 950) {  
+        //if (frameCount >= 1000) {
+        if (frameCount >= 1000 && game.score >= 950) {  
             image(game.backgroundImages[1], 0, 0, width, height);     
         }
-        if (frameCount >= 1500) {
+        if (frameCount >= 1500 && game.score >= 950) {
         //(frameCount >= 1500 && player.score >= 900)
             image(game.backgroundImages[2], 0, 0, width, height); 
         }
-        if (frameCount >= 2000) {
+        if (frameCount >= 2000 && game.score >= 950) {
         //(frameCount >= 2000 && player.score >= 850)
             image(game.backgroundImages[3], 0, 0, width, height);
         }
-        if (frameCount >= 2500) {
+        if (frameCount >= 2500 && game.score >= 950) {
         //
             image(game.backgroundImages[4], 0, 0, width, height);
         }

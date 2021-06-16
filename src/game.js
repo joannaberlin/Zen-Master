@@ -7,6 +7,7 @@ class Game {
         this.player = new Player();
         this.background = new Background();
         this.obstacles = [];
+        this.score = 1000;
     }
 
     preload() {
