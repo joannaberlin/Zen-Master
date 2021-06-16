@@ -3,8 +3,8 @@ class Obstacle {
         this.image = image;
         this.x = (Math.random() * height);
         this.y = 0;
-        this.width = 250;
-        this.height = 250;
+        this.width = 50;
+        this.height = 50;
     }
 
     collision(playerInfo) {
@@ -27,12 +27,15 @@ class Obstacle {
 
 		// 	//return true;
 		// }
-		console.log(playerY, obstacleY);
-		//if ( Math.abs(obstacleX - playerX) < 155 && Math.abs(this.y - playerInfo.y) < 60) {
-			if ( Math.abs(obstacleX - playerX) < 65 && Math.abs(this.y - playerInfo.y) < 40) {
+		//console.log(playerY, obstacleY);
 
-			//console.log('collision');
+		if ( Math.abs(obstacleX - playerX) < 50 && Math.abs(this.y - playerInfo.y) < 50) {
+		//if ( Math.abs(obstacleX - playerX) < 155 && Math.abs(this.y - playerInfo.y) < 60) {
+		
+		//if ( Math.abs(obstacleX - playerX) < 155 && Math.abs(playerInfo.y - this.y - this.height) <= 0) {
 			//change score here
+			//player.score - 50;
+		    
 			return true
 		} else {
 			return false
