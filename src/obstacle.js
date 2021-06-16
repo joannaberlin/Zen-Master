@@ -1,14 +1,14 @@
 class Obstacle {
     constructor(image) {
         this.image = image;
-        this.x = (Math.random() * height) / 2.5;;
+        this.x = (Math.random() * height);
         this.y = 0;
         this.width = 250;
         this.height = 250;
     }
 
     collision(playerInfo) {
-        console.log('collision', playerInfo);
+        //console.log('collision', playerInfo);
 		// get the middle of the obstacle
 		const obstacleX = this.x + this.width / 2;
 		const obstacleY = this.y + this.height / 2;
@@ -16,25 +16,39 @@ class Obstacle {
 		const playerX = playerInfo.x + playerInfo.width / 2;
 		const playerY = playerInfo.y + playerInfo.height / 2;
 		// measure the distance between obstacle and player using the dist() function
-		if (dist(obstacleX, obstacleY, playerX, playerY) > 25) {
-			return false;
+		// if (dist(obstacleX, obstacleY, playerX, playerY) > 50) {
+		// 	//false;
+		// } else {
+		// 	// we have a collision
+		// 	// increment score here
+		// 	console.log('collision');
+		// 	return 
+		// 		//return this.score - 50;
+
+		// 	//return true;
+		// }
+		console.log(playerY, obstacleY);
+		//if ( Math.abs(obstacleX - playerX) < 155 && Math.abs(this.y - playerInfo.y) < 60) {
+			if ( Math.abs(obstacleX - playerX) < 65 && Math.abs(this.y - playerInfo.y) < 40) {
+
+			//console.log('collision');
+			//change score here
+			return true
 		} else {
-			// we have a collision
-			// increment score here
-			return true;
+			return false
 		}
-
 	}
-
-    draw() {
-        // this.y--;
-        // image(this.image, this.x, this.y, this.width, this.height);
+    
+    draw() { 
         this.y++;
 		image(this.image, this.x, this.y, this.width, this.height);
     }
 }
+//if ( Math.abs(missileX - invaderX) < 25 && Math.abs(missileY - invaderY) < 25) {
 
+//if collision happen than player.score - 50
 
+//in Thought class => collision =>if condition with game.player.score += 30;
 
 
 //(if collision happened than player.score)

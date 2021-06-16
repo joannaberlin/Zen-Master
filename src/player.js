@@ -1,22 +1,33 @@
 class Player {
     constructor() {
-        this.velocity = 0;
-		this.gravity = 0.2;
-		this.width = 100;
-		this.height = 140;
+        
+        this.width = 100;
+		this.height = 120;
 		this.x = 0;
 		this.y = height - this.height;
+        
         this.score = 1000;
     }
 
     draw() {
-        this.velocity += this.gravity;
-        this.y += this.velocity;
-        if (this.y >= height - this.height) {
-			// we reset the y to it's starting position
-			this.y = height - this.height;
-		}
-        image(game.playerImage, this.x, this.y, this.width, this.height);
+    image(game.playerImage, this.x, this.y, this.width, this.height);
+    
+    }
+
+    moveUp() {
+        this.y -= 50;
+    }
+
+    moveDown() {
+        this.y += 50;
+    }
+
+    moveRight() {
+        this.x += 50;
+    }
+
+    moveLeft() {
+        this.x -= 50;
     }
 
 }

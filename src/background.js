@@ -1,23 +1,32 @@
 class Background {
     draw() {
-        if (frameCount < 500) {
+        
+        //image(game.backgroundImages[0], 0, 0, width, height);
+
+        if (frameCount < 1000) {
             image(game.backgroundImages[0], 0, 0, width, height);
-        }
-        if (frameCount === 1000) {
+        } 
+        if (frameCount >= 1000) {
             image(game.backgroundImages[1], 0, 0, width, height);     
         }
-        if (frameCount === 1500) {
+        if (frameCount >= 1500) {
             image(game.backgroundImages[2], 0, 0, width, height); 
         }
-        if (frameCount === 2000) {
+        if (frameCount >= 2000) {
             image(game.backgroundImages[3], 0, 0, width, height);
         }
-        if (frameCount === 2500) {
+        if (frameCount >= 2500) {
             image(game.backgroundImages[4], 0, 0, width, height);
         }
-    
+
+        // if (frameCount % 500 === 0 && player.score >= 900) {
+        //     image(game.backgroundImages[1], 0, 0, width, height);
+        // }
 }
 }
+//check score: if (frameCount % 500 === 0) && player.score >= 900 {
+//change background
+//}
 
 // if (frameCount % 500 === 0) {
 //     if (this.score > 100) {
@@ -28,4 +37,3 @@ class Background {
 //     }
 // }
 
-//in Thought class => collision =>if condition with game.player.score += 30;
