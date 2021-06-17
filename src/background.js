@@ -23,6 +23,8 @@ class Background {
         }
         if (frameCount >= 3200 && game.score >= 950) {
             image(game.backgroundImages[5], 0, 0, width, height);
+            //stop obstacles
+            stopDraw();
         }
         if (game.score < 950) {
             noLoop();
