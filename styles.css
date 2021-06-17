@@ -7,3 +7,22 @@ body {
     margin-bottom: 0;
     background-color: rgb(61, 2, 32); 
 }
+
+/* #description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+h1 {
+    font-family: 'Zen Dots', cursive;
+    color: white;    
+}
+
+p {
+    font-family: 'Zen Dots', cursive;
+    color: white;
+} */

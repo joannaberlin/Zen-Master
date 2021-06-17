@@ -26,9 +26,10 @@ class Game {
         
         this.background.draw();
         this.player.draw();
+       // this.score.draw();
         
         
-        if (frameCount % 80 === 0) {
+        if (frameCount % 50 === 0) {
             this.obstacles.push(new Obstacle(this.thought));
             //console.log(this.obstacles);
         }
@@ -50,3 +51,4 @@ class Game {
         //obstacle.collision(this.player);    
     }
 }
+//80

@@ -1,4 +1,5 @@
 const game = new Game();
+let scoreElem;
 
 function preload() {
     game.preload();
@@ -7,6 +8,11 @@ function preload() {
 function setup() {
     createCanvas(1000, windowHeight);
     game.setup();
+
+    // scoreElem = createDiv('Score = 0');
+    // scoreElem.position(30, 30);
+    // scoreElem.id = 'score';
+    // scoreElem.style('color', 'pink');
 }
 
 function draw() {
@@ -27,4 +33,13 @@ function keyPressed() {
 		game.player.moveRight();
 	}  
 
+}
+
+
+function checkGameStatus() {
+    if (game.score < 950) {
+      noLoop();
+      //const scoreVal = parseInt(scoreElem.html().substring(8));
+      //scoreElem.html('Game ended! Your score was : ' + scoreVal);
+    }
 }

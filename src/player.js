@@ -10,6 +10,23 @@ class Player {
     }
 
     draw() {
+
+    if (this.y >= height - this.height) {
+        // we reset the y to it's starting position
+        this.y = height - this.height;
+    } 
+    if (this.x >= width - this.width) {
+        this.x = width - this.width;
+    }
+    if (this.y <= 0){
+        this.y = 0;    
+    }
+    if (this.x <= 0){
+        this.x = 0;
+    }
+
+        
+
     image(game.playerImage, this.x, this.y, this.width, this.height);
     
     }
@@ -30,7 +47,6 @@ class Player {
     moveLeft() {
         this.x -= 40;
     }
-
 }
 
 
