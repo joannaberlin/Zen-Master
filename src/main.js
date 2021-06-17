@@ -1,7 +1,10 @@
 const game = new Game();
 //let scoreElem;
+let font,
+fontsize = 40;
 
 function preload() {
+    font = loadFont('assets/font/BalooTammudu2-Medium.ttf');
     game.preload();
 }
 
@@ -9,14 +12,15 @@ function setup() {
     createCanvas(800, windowHeight);
     game.setup();
 
-    // scoreElem = createDiv('Score = 0');
-    // scoreElem.position(30, 30);
-    // scoreElem.id = 'score';
-    // scoreElem.style('color', 'pink');
+    textFont(font);
+    textSize(fontsize);
+    textAlign(CENTER, CENTER);
+
 }
 
 function draw() {
     game.draw();
+
 }
 
 function keyPressed() {
@@ -34,11 +38,3 @@ function keyPressed() {
 	}  
 
 }
-
-// function checkGameStatus() {
-//     if (game.score < 950) {
-//       noLoop();
-//       //const scoreVal = parseInt(scoreElem.html().substring(8));
-//       //scoreElem.html('Game ended! Your score was : ' + scoreVal);
-//     }
-// }

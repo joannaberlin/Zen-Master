@@ -29,7 +29,7 @@ class Game {
         this.player.draw();
         
         
-        if (frameCount % 40 === 0) {
+        if (frameCount % 25 === 0) {
             this.obstacles.push(new Obstacle(this.thought));
             
         }
@@ -42,6 +42,16 @@ class Game {
             } else {
                 return true;
             }
-        })   
+        }) 
+        if (this.score < 950) {
+            noLoop();
+
+            background('pink');
+            textSize(40);
+            fill('white'); 
+            textAlign(CENTER, CENTER);
+            text('You are paying too much attention to thoughts! Keep practicing.', 0, 0, 800, 600);
+        
+        }  
     }
 }

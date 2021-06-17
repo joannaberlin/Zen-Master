@@ -5,14 +5,12 @@ class Player {
 		this.height = 130;
 		this.x = 0;
 		this.y = height - this.height;
-        
-        //this.score = 1000;
+    
     }
 
     draw() {
 
     if (this.y >= height - this.height) {
-        // we reset the y to it's starting position
         this.y = height - this.height;
     } 
     if (this.x >= width - this.width) {
