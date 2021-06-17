@@ -11,7 +11,8 @@ class Obstacle {
 		const obstacleX = this.x + this.width / 2;
 		const playerX = playerInfo.x + playerInfo.width / 2;
 
-		if ( Math.abs(obstacleX - playerX) < 50 && Math.abs(this.y - playerInfo.y) < 50) {
+		if ( Math.abs(obstacleX - playerX) < 40 && Math.abs(this.y - playerInfo.y) < 70) {
+		//if ( Math.abs(obstacleX - playerX) < 40 && Math.abs(this.y - playerInfo.y) < 40) {
 			//change score here
 			game.score -= 50;
 		    console.log(game.score);

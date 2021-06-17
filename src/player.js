@@ -1,8 +1,8 @@
 class Player {
     constructor() {
         
-        this.width = 100;
-		this.height = 120;
+        this.width = 110;
+		this.height = 130;
 		this.x = 0;
 		this.y = height - this.height;
         
@@ -24,8 +24,6 @@ class Player {
     if (this.x <= 0){
         this.x = 0;
     }
-
-        
 
     image(game.playerImage, this.x, this.y, this.width, this.height);
     

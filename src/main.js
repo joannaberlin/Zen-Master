@@ -1,12 +1,12 @@
 const game = new Game();
-let scoreElem;
+//let scoreElem;
 
 function preload() {
     game.preload();
 }
 
 function setup() {
-    createCanvas(1000, windowHeight);
+    createCanvas(800, windowHeight);
     game.setup();
 
     // scoreElem = createDiv('Score = 0');
@@ -35,11 +35,10 @@ function keyPressed() {
 
 }
 
-
-function checkGameStatus() {
-    if (game.score < 950) {
-      noLoop();
-      //const scoreVal = parseInt(scoreElem.html().substring(8));
-      //scoreElem.html('Game ended! Your score was : ' + scoreVal);
-    }
-}
+// function checkGameStatus() {
+//     if (game.score < 950) {
+//       noLoop();
+//       //const scoreVal = parseInt(scoreElem.html().substring(8));
+//       //scoreElem.html('Game ended! Your score was : ' + scoreVal);
+//     }
+// }
