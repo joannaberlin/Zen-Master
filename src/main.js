@@ -1,40 +1,37 @@
 const game = new Game();
 //let scoreElem;
 let font,
-fontsize = 40;
+	fontsize = 40;
 
 function preload() {
-    font = loadFont('assets/font/BalooTammudu2-Medium.ttf');
-    game.preload();
+	font = loadFont("assets/font/BalooTammudu2-Medium.ttf");
+	game.preload();
 }
 
 function setup() {
-    createCanvas(800, windowHeight);
-    game.setup();
+	createCanvas(850, windowHeight);
+	game.setup();
 
-    textFont(font);
-    textSize(fontsize);
-    textAlign(CENTER, CENTER);
-
+	textFont(font);
+	textSize(fontsize);
+	textAlign(CENTER, CENTER);
 }
 
 function draw() {
-    game.draw();
-
+	game.draw();
 }
 
 function keyPressed() {
-    if (keyCode === 38) {
+	if (keyCode === 38) {
 		game.player.moveUp();
 	}
-    if (keyCode === 40) {
+	if (keyCode === 40) {
 		game.player.moveDown();
-	} 
-    if (keyCode === 37) {
+	}
+	if (keyCode === 37) {
 		game.player.moveLeft();
-	} 
-    if (keyCode === 39) {
+	}
+	if (keyCode === 39) {
 		game.player.moveRight();
-	}  
-
+	}
 }
